@@ -2,22 +2,9 @@
   <!-- Arguments -->
   <arg name="slam_methods" default="gmapping" doc="slam type [gmapping, cartographer, hector, karto, frontier_exploration]"/>
   <arg name="configuration_basename" default="scuttle_lds_2d.lua"/>
-  <arg name="open_rviz" default="false"/>
-
-  <!-- SCUTTLE -->
-  <!--
-  <include file="$(find scuttle_bringup)/launch/scuttle_remote.launch">
-  </include>
-  -->
 
   <!-- SLAM: Gmapping, Cartographer, Hector, Karto, Frontier_exploration, RTAB-Map -->
   <include file="$(find scuttle_slam)/launch/scuttle_$(arg slam_methods).launch">
     <arg name="configuration_basename" value="$(arg configuration_basename)"/>
   </include>
-
-  <!-- rviz -->
-  <group if="$(arg open_rviz)">
-    <node pkg="rviz" type="rviz" name="rviz" required="true"
-          args="-d $(find scuttle_slam)/rviz/scuttle_$(arg slam_methods).rviz"/>
-  </group>
 </launch>
