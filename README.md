@@ -27,7 +27,7 @@ SLAM algorithms require that your robot publishes odometry data.
 
 The implemented algorithms are:
 
-1. [Gmapping](http://wiki.ros.org/gmapping) - [OpenSLAM's gmapping])(<https://openslam-org.github.io/gmapping.html>)
+1. [Gmapping](http://wiki.ros.org/gmapping) - [OpenSLAM's gmapping](<https://openslam-org.github.io/gmapping.html>)
    algorithm
 
 ## Usage
